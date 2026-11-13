@@ -2,10 +2,12 @@
 #  - Push a tag like "v1.0"      -> builds and publishes a GitHub Release with the zip attached.
 #  - Run it manually (Actions tab) -> builds and uploads the zip as a downloadable artifact only.
 name: Build & release
- 
+
 on:
   push:
     tags: ["v*"]
+  release:
+    types: [published]
   workflow_dispatch:
 
 permissions:
